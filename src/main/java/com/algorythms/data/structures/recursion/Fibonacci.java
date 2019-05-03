@@ -16,15 +16,13 @@ public class Fibonacci {
     // f(n) = f(n - 1) + f(n - 2)
 
     public static int fiboRecursive(int num) {
-        if(num == 0) return 0;
-        if(num == 1) return 1;
+        if(num <= 1) return num;
         return fiboRecursive(num - 1) + fiboRecursive(num - 2);
     }
 
     public static int fiboIterative(int num) {
-        if (num == 0) {
-            return 0;
-        }
+        if (num == 0) return 0;
+
         int counter = 1;
         int n1 = 0;
         int n2 = 1;
