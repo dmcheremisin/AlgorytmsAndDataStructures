@@ -9,7 +9,7 @@ public class InsertionSort {
         for (int firstUnsorted = 1; firstUnsorted < arr.length; firstUnsorted++){
             int elem = arr[firstUnsorted];
             int i;
-            for(i = firstUnsorted; i > 0 &&  arr[i - 1] > elem; i--){
+            for(i = firstUnsorted; i > 0 && arr[i - 1] > elem; i--){
                 arr[i] = arr[i-1];
             }
             arr[i] = elem;
