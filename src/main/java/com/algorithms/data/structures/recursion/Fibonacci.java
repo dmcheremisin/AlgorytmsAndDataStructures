@@ -12,7 +12,6 @@ public class Fibonacci {
     // f2 = 1 = 1 + 0
     // f3 = 2 = 1 + 1 = 1 + 1 + 0
     // f4 = 3 = 2 + 1 = 1 + 1 + 0 + 1 + 0
-    // f5 = 5 = 3 + 2 = 1 + 1 + 0 + 1 + 0 + 1 + 1 + 0
     // f(n) = f(n - 1) + f(n - 2)
 
     public static int fiboRecursive(int num) {

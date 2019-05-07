@@ -13,6 +13,7 @@ public class Factorial {
     // 4! = 4 * 3 * 2 * 1 = 4 * 3!
     // ...
     // n! = n * (n - 1)!
+    // f(n) = n * f(n - 1)
 
     public static int recursiveFactorial(int num) {
         if(num == 0) {
