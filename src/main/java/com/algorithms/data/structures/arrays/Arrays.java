@@ -1,4 +1,4 @@
-package com.algorythms.data.structures.arrays;
+package com.algorithms.data.structures.arrays;
 
 public class Arrays {
 

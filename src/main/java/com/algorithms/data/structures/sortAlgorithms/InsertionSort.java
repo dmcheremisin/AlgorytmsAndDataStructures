@@ -1,4 +1,4 @@
-package com.algorythms.data.structures.sortAlgorithms;
+package com.algorithms.data.structures.sortAlgorithms;
 
 public class InsertionSort {
 

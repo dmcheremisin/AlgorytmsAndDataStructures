@@ -1,4 +1,4 @@
-package com.algorythms.data.structures.sortAlgorithms;
+package com.algorithms.data.structures.sortAlgorithms;
 
 public class Utils {
     public static void swap(int[] array, int i, int j) {

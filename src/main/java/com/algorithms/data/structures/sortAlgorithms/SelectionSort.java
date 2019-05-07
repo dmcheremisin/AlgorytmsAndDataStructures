@@ -1,6 +1,6 @@
-package com.algorythms.data.structures.sortAlgorithms;
+package com.algorithms.data.structures.sortAlgorithms;
 
-import static com.algorythms.data.structures.sortAlgorithms.Utils.swap;
+import static com.algorithms.data.structures.sortAlgorithms.Utils.swap;
 
 public class SelectionSort {
 

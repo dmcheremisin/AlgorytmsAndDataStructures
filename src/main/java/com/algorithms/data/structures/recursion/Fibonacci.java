@@ -1,4 +1,4 @@
-package com.algorythms.data.structures.recursion;
+package com.algorithms.data.structures.recursion;
 
 public class Fibonacci {
 
