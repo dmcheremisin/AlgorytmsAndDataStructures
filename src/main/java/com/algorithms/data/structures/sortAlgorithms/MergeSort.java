@@ -14,9 +14,7 @@ public class MergeSort {
     }
 
     private static void mergeSort(int[] input, int start, int end) {
-        if(end - start < 2) {
-            return;
-        }
+        if(end - start < 2) return;
 
         int mid = (start + end) / 2;
         mergeSort(input, start, mid);
