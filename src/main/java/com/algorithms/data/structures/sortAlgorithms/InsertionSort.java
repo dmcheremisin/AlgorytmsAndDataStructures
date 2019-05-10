@@ -1,5 +1,7 @@
 package com.algorithms.data.structures.sortAlgorithms;
 
+import static com.algorithms.data.structures.sortAlgorithms.Utils.printArr;
+
 public class InsertionSort {
 
 
@@ -15,10 +17,7 @@ public class InsertionSort {
             arr[i] = elem;
         }
 
-        System.out.println(">>>>>> Result: ");
-        for (int i : arr) {
-            System.out.println(i);
-        }
+        printArr(arr);
         /*
         >>>>>> Result:
         -22

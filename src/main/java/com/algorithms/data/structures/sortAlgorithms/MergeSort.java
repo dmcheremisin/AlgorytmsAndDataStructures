@@ -1,5 +1,7 @@
 package com.algorithms.data.structures.sortAlgorithms;
 
+import static com.algorithms.data.structures.sortAlgorithms.Utils.printArr;
+
 public class MergeSort {
 
     public static void main(String[] args) {
@@ -7,10 +9,7 @@ public class MergeSort {
 
         mergeSort(arr, 0, arr.length);
 
-        System.out.println(">>>>>> Result: ");
-        for (int i : arr) {
-            System.out.println(i);
-        }
+        printArr(arr);
     }
 
     private static void mergeSort(int[] input, int start, int end) {

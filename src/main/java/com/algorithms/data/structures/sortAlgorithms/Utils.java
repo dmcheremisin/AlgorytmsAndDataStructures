@@ -9,4 +9,11 @@ public class Utils {
         array[i] = array[j];
         array[j] = temp;
     }
+
+    public static void printArr(int[] arr) {
+        System.out.println(">>>>>> Result: ");
+        for (int i : arr) {
+            System.out.println(i);
+        }
+    }
 }
