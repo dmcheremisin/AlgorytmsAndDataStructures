@@ -14,16 +14,17 @@ public class RadixSort {
 
     private static void radixSort(int[] input, int radix, int width) {
         for(int i = 0; i < width; i++) {
-            radixSingleSort(input, i, radix);
+            int divider = (int) Math.pow(10, i);
+            radixSingleSort(input, divider, radix);
         }
     }
 
-    private static void radixSingleSort(int[] input, int position, int radix) {
+    private static void radixSingleSort(int[] input, int divider, int radix) {
         int numItems = input.length;
         int[] countArray = new int[radix];
 
         for(int value : input) {
-            countArray[getDigit(position, value, radix)]++;
+            countArray[getDigit(divider, value, radix)]++;
         }
 
         for(int j = 1; j < radix; j++) {
@@ -32,16 +33,15 @@ public class RadixSort {
 
         int[] temp = new int[numItems];
         for(int tempIndex = numItems - 1; tempIndex >= 0; tempIndex--) {
-            temp[--countArray[getDigit(position, input[tempIndex], radix)]] = input[tempIndex];
+            int digit = getDigit(divider, input[tempIndex], radix);
+            temp[--countArray[digit]] = input[tempIndex];
         }
 
-        for(int tempIndex = 0; tempIndex < numItems; tempIndex++) {
-            input[tempIndex] = temp[tempIndex];
-        }
+        System.arraycopy(temp, 0, input, 0, numItems);
     }
 
-    private static int getDigit(int position, int value, int radix) {
-        return value / (int) Math.pow(10, position) % radix;
+    private static int getDigit(int divider, int value, int radix) {
+        return value / divider % radix;
     }
 
 }
