@@ -22,19 +22,36 @@ public class RadixSort {
     private static void radixSingleSort(int[] input, int divider, int radix) {
         int numItems = input.length;
         int[] countArray = new int[radix];
+        int[] temp = new int[numItems];
 
         for(int value : input) {
             countArray[getDigit(divider, value, radix)]++;
         }
 
+//        int k = 0;
+//        for(int i = 0; i < radix; i++) {
+//            while(countArray[i] > 0) {
+//                for(int j = 0; j < numItems; j++) {
+//                    int digit = getDigit(divider, input[j], radix);
+//                    if(digit == i) {
+//                        countArray[i]--;
+//                        temp[k] = input[j];
+//                        k++;
+//                        input[j] = -1;
+//                    }
+//                }
+//            }
+//        }
+
         for(int j = 1; j < radix; j++) {
             countArray[j] += countArray[j - 1];
         }
 
-        int[] temp = new int[numItems];
+
         for(int tempIndex = numItems - 1; tempIndex >= 0; tempIndex--) {
             int digit = getDigit(divider, input[tempIndex], radix);
-            temp[--countArray[digit]] = input[tempIndex];
+            int countIndex = --countArray[digit];
+            temp[countIndex] = input[tempIndex];
         }
 
         System.arraycopy(temp, 0, input, 0, numItems);
