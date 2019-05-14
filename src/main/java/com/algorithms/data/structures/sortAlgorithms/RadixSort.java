@@ -9,17 +9,17 @@ public class RadixSort {
 
         radixSort(radixArray, 10, 4);
 
-        System.out.println(Arrays.toString(radixArray));
+        System.out.println(Arrays.toString(radixArray)); // [1330, 1594, 4586, 4725, 5729, 8792]
     }
 
     private static void radixSort(int[] input, int radix, int width) {
         for(int i = 0; i < width; i++) {
             int divider = (int) Math.pow(10, i);
-            radixSingleSort(input, divider, radix);
+            radixSingleSort(input, radix, divider);
         }
     }
 
-    private static void radixSingleSort(int[] input, int divider, int radix) {
+    private static void radixSingleSort(int[] input, int radix, int divider) {
         int numItems = input.length;
         int[] countArray = new int[radix];
         int[] temp = new int[numItems];
@@ -28,6 +28,7 @@ public class RadixSort {
             countArray[getDigit(divider, value, radix)]++;
         }
 
+//        my implementation
 //        int k = 0;
 //        for(int i = 0; i < radix; i++) {
 //            while(countArray[i] > 0) {
@@ -43,15 +44,15 @@ public class RadixSort {
 //            }
 //        }
 
-        for(int j = 1; j < radix; j++) {
-            countArray[j] += countArray[j - 1];
+        for(int i = 1; i < radix; i++) {
+            countArray[i] += countArray[i - 1];
         }
 
-
-        for(int tempIndex = numItems - 1; tempIndex >= 0; tempIndex--) {
-            int digit = getDigit(divider, input[tempIndex], radix);
+        for(int i = numItems - 1; i >= 0; i--) {
+            int value = input[i];
+            int digit = getDigit(divider, value, radix);
             int countIndex = --countArray[digit];
-            temp[countIndex] = input[tempIndex];
+            temp[countIndex] = value;
         }
 
         System.arraycopy(temp, 0, input, 0, numItems);
