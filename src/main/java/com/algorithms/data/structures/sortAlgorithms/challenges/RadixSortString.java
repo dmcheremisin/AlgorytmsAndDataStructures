@@ -24,7 +24,7 @@ public class RadixSortString {
         String[] temp = new String[numItems];
 
         for(String value : input) {
-            countArray[getDigit(value, position)]++;
+            countArray[getIndex(value, position)]++;
         }
 
         for(int j = 1; j < radix; j++) {
@@ -33,7 +33,7 @@ public class RadixSortString {
 
         for(int i = numItems - 1; i >= 0; i--) {
             String value = input[i];
-            int digit = getDigit(value, position);
+            int digit = getIndex(value, position);
             int countIndex = --countArray[digit];
             temp[countIndex] = value;
         }
@@ -41,8 +41,8 @@ public class RadixSortString {
         System.arraycopy(temp, 0, input, 0, numItems);
     }
 
-    private static int getDigit(String value, int position) {
-        return value.charAt(position) - 97;
+    private static int getIndex(String value, int position) {
+        return value.charAt(position) - 'a';
     }
 
 }
