@@ -27,9 +27,7 @@ public class SingleLinkedList {
             return null;
         }
         Employee employee = head.getEmployee();
-        EmployeeNode removedNode = head;
         head = head.getNext();
-        removedNode = null;
         size--;
         return employee;
     }
