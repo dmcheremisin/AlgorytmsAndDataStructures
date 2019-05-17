@@ -42,6 +42,27 @@ public class SingleLinkedList {
         size++;
     }
 
+    public Employee remove() {
+        if(isEmpty()) {
+            return null;
+        }
+        EmployeeNode next = head;
+        EmployeeNode previous = null;
+        while(next.getNext() != null) {
+            previous = next;
+            next = next.getNext();
+        }
+        Employee employee = next.getEmployee();
+        if(previous != null) {
+            previous.setNext(null);
+            size--;
+        } else {
+            head = null;
+            size = 0;
+        }
+        return employee;
+    }
+
     public void printList() {
         EmployeeNode next = head;
         System.out.print("HEAD -> ");

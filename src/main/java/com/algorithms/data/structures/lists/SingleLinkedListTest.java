@@ -31,5 +31,22 @@ public class SingleLinkedListTest {
 //        NEXT -> Employee{id=25, firstName='John', lastName='Snow'}
 //        NEXT -> Employee{id=43, firstName='Cersei', lastName='Lannister'}
 //        NEXT -> null
+
+        list.remove();
+        list.printList();
+//        HEAD -> Employee{id=38, firstName='Daineris', lastName='Targarien'}
+//        NEXT -> Employee{id=25, firstName='John', lastName='Snow'}
+//        NEXT -> null
+
+        list.remove();
+        Employee removed = list.remove();
+        Employee nullEmployee = list.remove();
+        list.printList();
+//        NEXT -> null
+//        HEAD -> null
+        System.out.println("Removed: " + removed);
+        System.out.println("No elements, so null: " + nullEmployee);
+//        Removed: Employee{id=38, firstName='Daineris', lastName='Targarien'}
+//        No elements, so null: null
     }
 }
