@@ -10,13 +10,13 @@ public class Main {
         Integer four = 4;
 
         IntegerLinkedList list = new IntegerLinkedList();
-        list.insertSorted(three);
+        list.insertSortedFromSolution(three);
         list.printList();
-        list.insertSorted(two);
+        list.insertSortedFromSolution(two);
         list.printList();
-        list.insertSorted(one);
+        list.insertSortedFromSolution(one);
         list.printList();
-        list.insertSorted(four);
+        list.insertSortedFromSolution(four);
         list.printList();
 
 //        HEAD -> 3 -> null

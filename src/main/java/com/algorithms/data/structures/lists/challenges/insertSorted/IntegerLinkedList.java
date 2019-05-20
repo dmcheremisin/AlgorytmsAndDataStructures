@@ -52,6 +52,27 @@ public class IntegerLinkedList {
         size++;
     }
 
+    public void insertSortedFromSolution(Integer value) {
+        if(head == null || head.getValue() >= value) {
+            addToFront(value);
+            return;
+        }
+
+        IntegerNode current = head.getNext();
+        IntegerNode previous = head;
+
+        while(current != null && current.getValue() != null && current.getValue() < value) {
+            previous = current;
+            current = current.getNext();
+        }
+
+        IntegerNode newNode = new IntegerNode(value);
+        newNode.setNext(current);
+        previous.setNext(newNode);
+
+        size++;
+    }
+
     public int getSize() {
         return size;
     }
