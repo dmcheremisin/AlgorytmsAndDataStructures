@@ -48,20 +48,20 @@ public class DoublyLinkedList {
         EmployeeNode newNode = new EmployeeNode(employee);
         EmployeeNode beforeNode = new EmployeeNode(before);
 
-        EmployeeNode next = head;
-        EmployeeNode previous = null;
-        while(!next.equals(beforeNode) && next.getNext() != null) {
-            previous = next;
-            next = next.getNext();
+        EmployeeNode current = head;
+        while(current != null && !current.equals(beforeNode)) {
+            current = current.getNext();
         }
-        if(!next.equals(beforeNode))
+        if(current == null)
             return false;
+
+        EmployeeNode previous = current.getPrevious();
 
         if(previous != null) {
             previous.setNext(newNode);
             newNode.setPrevious(previous);
-            newNode.setNext(next);
-            next.setPrevious(newNode);
+            newNode.setNext(current);
+            current.setPrevious(newNode);
         } else {
             head.setPrevious(newNode);
             newNode.setNext(head);
