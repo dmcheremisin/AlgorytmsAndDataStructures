@@ -1,7 +1,5 @@
 package com.algorithms.data.structures.lists.challenges.insertSorted;
 
-import com.algorithms.data.structures.lists.singleLinkedList.EmployeeNode;
-
 public class IntegerLinkedList {
 
     private IntegerNode head;
