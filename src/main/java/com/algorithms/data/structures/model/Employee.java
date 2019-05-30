@@ -1,4 +1,4 @@
-package com.algorithms.data.structures.lists;
+package com.algorithms.data.structures.model;
 
 public class Employee {
 

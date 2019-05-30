@@ -1,6 +1,7 @@
 package com.algorithms.data.structures.lists;
 
 import com.algorithms.data.structures.lists.singleLinkedList.SingleLinkedList;
+import com.algorithms.data.structures.model.Employee;
 
 public class SingleLinkedListTest {
 
