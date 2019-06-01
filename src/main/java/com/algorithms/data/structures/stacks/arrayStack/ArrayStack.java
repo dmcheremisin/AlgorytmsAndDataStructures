@@ -29,7 +29,7 @@ public class ArrayStack {
         return true;
     }
 
-    public Employee poll() {
+    public Employee pop() {
         checkState();
         Employee employee = data[--position];
         data[position] = null;

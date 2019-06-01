@@ -19,12 +19,12 @@ public class ArrayStackTest {
 
         System.out.println(stack.peek()); // Employee{id=2, firstName='Ir', lastName='Ch'}
 
-        System.out.println(stack.poll()); // Employee{id=2, firstName='Ir', lastName='Ch'}
+        System.out.println(stack.pop()); // Employee{id=2, firstName='Ir', lastName='Ch'}
         System.out.println(stack.peek()); // Employee{id=2, firstName='Ma', lastName='Ch'}
 
-        stack.poll();
-        stack.poll();
-        stack.poll();
-        // stack.poll(); Exception in thread "main" java.lang.IllegalStateException: The stack is empty
+        stack.pop();
+        stack.pop();
+        stack.pop();
+        // stack.pop(); Exception in thread "main" java.lang.IllegalStateException: The stack is empty
     }
 }
