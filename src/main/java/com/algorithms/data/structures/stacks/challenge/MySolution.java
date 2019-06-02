@@ -3,7 +3,7 @@ package com.algorithms.data.structures.stacks.challenge;
 import java.util.Deque;
 import java.util.LinkedList;
 
-// check palindrome using stack or FIFO principle
+// check palindrome using stack or LIFO principle
 
 public class MySolution {
 
