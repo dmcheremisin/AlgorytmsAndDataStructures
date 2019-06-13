@@ -2,7 +2,7 @@ package com.algorithms.data.structures.queues.circularQueue;
 
 import com.algorithms.data.structures.model.Employee;
 
-public class Main {
+public class CircularQueueTest {
 
     public static void main(String[] args) {
 
@@ -12,7 +12,7 @@ public class Main {
         Employee mikeWilson = new Employee("Mike", "Wilson", 3245);
         Employee billEnd = new Employee("Bill", "End", 78);
 
-        ArrayQueue queue = new ArrayQueue(5);
+        CircularQueue queue = new CircularQueue(5);
 
         queue.add(janeJones);
         queue.add(johnDoe);

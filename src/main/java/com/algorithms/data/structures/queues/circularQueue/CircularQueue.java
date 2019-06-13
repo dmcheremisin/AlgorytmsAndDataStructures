@@ -4,13 +4,13 @@ import com.algorithms.data.structures.model.Employee;
 
 import java.util.NoSuchElementException;
 
-public class ArrayQueue {
+public class CircularQueue {
 
     private Employee[] queue;
     private int front;
     private int back;
 
-    public ArrayQueue(int capacity) {
+    public CircularQueue(int capacity) {
         queue = new Employee[capacity];
     }
 

@@ -12,6 +12,12 @@ public class Employee {
         this.lastName = lastName;
     }
 
+    public Employee(String firstName, String lastName, int id) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     public int getId() {
         return id;
     }
