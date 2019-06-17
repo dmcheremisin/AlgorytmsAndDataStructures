@@ -5,7 +5,7 @@ import java.util.LinkedList;
 
 // check palindrome using stack or LIFO principle
 
-public class MySolution {
+public class CheckForPalindrome {
 
     public static void main(String[] args) {
         // should return true

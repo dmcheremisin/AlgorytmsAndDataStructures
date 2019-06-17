@@ -3,9 +3,9 @@ package com.algorithms.data.structures.queues.challenge;
 import java.util.Deque;
 import java.util.LinkedList;
 
-// check palindrome using stack or LIFO principle
+// check palindrome using queue(FIFO)
 
-public class MySolution {
+public class CheckForPalindrome {
 
     public static void main(String[] args) {
         // should return true
@@ -34,7 +34,7 @@ public class MySolution {
         }
 
         while(!queue.isEmpty()) {
-            if(stack.pop().equals(queue.poll())) {
+            if(!stack.pop().equals(queue.poll())) {
                 return false;
             }
         }
