@@ -21,7 +21,7 @@ public class CheckForPalindrome {
     }
 
     private static boolean checkForPalindrome(String input) {
-        input = input.replaceAll("\\W", "");
+        input = input.toLowerCase().replaceAll("[^a-z]", "");
         Deque<Character> list = new LinkedList<>();
         for (char aChar : input.toCharArray()) {
             list.push(aChar);
