@@ -3,7 +3,7 @@ package com.algorithms.data.structures.queues.challenge;
 import java.util.Deque;
 import java.util.LinkedList;
 
-// check palindrome using queue(FIFO)
+// check palindrome using queue(FIFO) and stack(LIFO)
 
 public class CheckForPalindrome {
 
