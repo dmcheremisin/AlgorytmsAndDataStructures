@@ -30,5 +30,9 @@ public class SimpleHashTableTest {
 //        null
 //        null
 //        null
+
+        System.out.println(hashTable.get("Wilson"));// Employee{id=3245, firstName='Mike', lastName='Wilson'}
+
+        System.out.println(hashTable.get("abrababra")); // null
     }
 }
