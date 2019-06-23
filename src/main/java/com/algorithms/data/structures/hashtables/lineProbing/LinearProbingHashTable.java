@@ -1,5 +1,6 @@
 package com.algorithms.data.structures.hashtables.lineProbing;
 
+import com.algorithms.data.structures.hashtables.StoredEmployee;
 import com.algorithms.data.structures.model.Employee;
 
 public class LinearProbingHashTable {
@@ -55,7 +56,7 @@ public class LinearProbingHashTable {
         hashtable = new StoredEmployee[oldHashtable.length];
         for (int i = 0; i < oldHashtable.length; i++) {
             if (oldHashtable[i] != null) {
-                put(oldHashtable[i].key, oldHashtable[i].employee);
+                put(oldHashtable[i].getKey(), oldHashtable[i].employee);
             }
         }
 
@@ -69,7 +70,7 @@ public class LinearProbingHashTable {
     private int findKey(String key) {
         int hashedKey = hashKey(key);
         if (hashtable[hashedKey] != null &&
-                hashtable[hashedKey].key.equals(key)) {
+                hashtable[hashedKey].getKey().equals(key)) {
             return hashedKey;
         }
 
@@ -83,12 +84,12 @@ public class LinearProbingHashTable {
 
         while (hashedKey != stopIndex &&
                 hashtable[hashedKey] != null &&
-                !hashtable[hashedKey].key.equals(key)) {
+                !hashtable[hashedKey].getKey().equals(key)) {
             hashedKey = (hashedKey + 1) % hashtable.length;
         }
 
         if (hashtable[hashedKey] != null &&
-                hashtable[hashedKey].key.equals(key)) {
+                hashtable[hashedKey].getKey().equals(key)) {
             return hashedKey;
         }
         else {
