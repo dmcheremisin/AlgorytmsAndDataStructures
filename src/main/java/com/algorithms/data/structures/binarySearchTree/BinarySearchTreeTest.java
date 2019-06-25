@@ -13,5 +13,7 @@ public class BinarySearchTreeTest {
         tree.add(26);
         tree.add(22);
         tree.add(32);
+
+        tree.traverse(); // 15, 20, 22, 25, 26, 27, 29, 30, 32,
     }
 }

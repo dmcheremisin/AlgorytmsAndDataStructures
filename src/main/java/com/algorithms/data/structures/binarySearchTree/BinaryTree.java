@@ -10,4 +10,11 @@ public class BinaryTree {
             root.insert(value);
         }
     }
+
+    public void traverse() {
+        if(root != null) {
+            root.traverse();
+        }
+        System.out.println();
+    }
 }

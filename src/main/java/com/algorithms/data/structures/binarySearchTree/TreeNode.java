@@ -10,6 +10,16 @@ public class TreeNode {
         this.data = data;
     }
 
+    public void traverse() {
+        if(left != null) {
+            left.traverse();
+        }
+        System.out.print(data + ", ");
+        if(right != null) {
+            right.traverse();
+        }
+    }
+
     public void insert(int value) {
         if(value == data) {
             return;
