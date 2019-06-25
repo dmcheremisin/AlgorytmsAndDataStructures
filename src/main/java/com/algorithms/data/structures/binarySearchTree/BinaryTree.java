@@ -11,6 +11,18 @@ public class BinaryTree {
         }
     }
 
+    public Integer get(int value) {
+        return root == null ? null : root.get(value);
+    }
+
+    public Integer min() {
+        return root == null ? null : root.min();
+    }
+
+    public Integer max() {
+        return root == null ? null : root.max();
+    }
+
     public void traverse() {
         if(root != null) {
             root.traverse();

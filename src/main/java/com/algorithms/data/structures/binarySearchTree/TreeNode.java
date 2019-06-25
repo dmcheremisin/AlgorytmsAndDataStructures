@@ -2,7 +2,7 @@ package com.algorithms.data.structures.binarySearchTree;
 
 public class TreeNode {
 
-    private int data;
+    private Integer data;
     private TreeNode left;
     private TreeNode right;
 
@@ -39,11 +39,32 @@ public class TreeNode {
         }
     }
 
-    public int getData() {
+    public Integer get(int value) {
+        if (data == value) {
+            return value;
+        }
+        if (value < data && left != null) {
+            return left.get(value);
+        }
+        if (value > data && right != null) {
+            return right.get(value);
+        }
+        return null;
+    }
+
+    public Integer min() {
+        return left == null ? data : left.min();
+    }
+
+    public Integer max() {
+        return right == null ? data : right.max();
+    }
+
+    public Integer getData() {
         return data;
     }
 
-    public void setData(int data) {
+    public void setData(Integer data) {
         this.data = data;
     }
 
