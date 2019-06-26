@@ -57,4 +57,12 @@ public class BinaryTree {
         }
         System.out.println();
     }
+
+    // visit the root first
+    public void preOrderTraversal() {
+        if(root != null) {
+            root.preOrderTraverse();
+        }
+        System.out.println();
+    }
 }

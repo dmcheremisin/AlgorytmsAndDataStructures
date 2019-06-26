@@ -16,6 +16,7 @@ public class BinarySearchTreeTest {
         tree.add(17);
 
         tree.traverse(); // 15, 17, 20, 22, 25, 26, 27, 29, 30, 32,
+        tree.preOrderTraversal(); // 25, 20, 15, 17, 22, 27, 26, 30, 29, 32,
 
         System.out.println(tree.get(27)); // 27
         System.out.println(tree.get(22)); // 22

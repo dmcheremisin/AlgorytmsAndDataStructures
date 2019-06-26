@@ -20,6 +20,16 @@ public class TreeNode {
         }
     }
 
+    public void preOrderTraverse() {
+        System.out.print(data + ", ");
+        if(left != null) {
+            left.preOrderTraverse();
+        }
+        if(right != null) {
+            right.preOrderTraverse();
+        }
+    }
+
     public void insert(int value) {
         if(value == data) {
             return;
