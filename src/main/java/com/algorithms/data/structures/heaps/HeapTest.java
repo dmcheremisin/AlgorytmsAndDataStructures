@@ -14,6 +14,7 @@ public class HeapTest {
         heap.insert(52);
         heap.insert(67);
 
+        System.out.println(heap.peek()); // 80
         heap.printHeap(); // 80, 75, 60, 68, 55, 40, 52, 67,
 
 //        heap.delete(1);
@@ -21,6 +22,7 @@ public class HeapTest {
 
         heap.delete(0);
         heap.printHeap(); // 75, 68, 60, 67, 55, 40, 52,
+        System.out.println(heap.peek()); // 75
     }
 
 }

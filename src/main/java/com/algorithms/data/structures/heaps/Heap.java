@@ -97,7 +97,13 @@ public class Heap {
             System.out.print(heap[i] + ", ");
         }
         System.out.println();
+    }
 
+    public int peek() {
+        if(isEmpty()) {
+            throw new IndexOutOfBoundsException("Heap is empty");
+        }
+        return heap[0];
     }
 
 }
