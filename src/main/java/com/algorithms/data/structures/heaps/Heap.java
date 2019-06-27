@@ -17,42 +17,6 @@ public class Heap {
         heap[index] = value;
     }
 
-    private int getParent(int index) {
-        return (index - 1) / 2;
-    }
-
-    private int getChild(int index, boolean left) {
-        return 2 * index + (left ? 1 : 2);
-    }
-
-    public boolean isFull() {
-        return size == heap.length;
-    }
-
-    public boolean isEmpty() {
-        return size == 0;
-    }
-
-    public int delete(int index) {
-        if(isEmpty()) {
-            throw new IndexOutOfBoundsException("Heap is empty");
-        }
-
-        int parent = getParent(index);
-        int deletedValue = heap[index];
-
-        heap[index] = heap[size - 1];
-
-        if(index == 0 || heap[index] < heap[parent]) {
-            fixHeapBelow(index, size - 1);
-        } else {
-            fixHeapAbove(index);
-        }
-
-        size--;
-        return deletedValue;
-    }
-
     private void fixHeapBelow(int index, int lastHeapIndex) {
         int childToSwap;
 
@@ -82,6 +46,22 @@ public class Heap {
         }
     }
 
+    private int getParent(int index) {
+        return (index - 1) / 2;
+    }
+
+    private int getChild(int index, boolean left) {
+        return 2 * index + (left ? 1 : 2);
+    }
+
+    public boolean isFull() {
+        return size == heap.length;
+    }
+
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
     public void insert(int value) {
         if(isFull()) {
             throw new IndexOutOfBoundsException("Heap is full");
@@ -90,6 +70,26 @@ public class Heap {
 
         fixHeapAbove(size);
         size++;
+    }
+
+    public int delete(int index) {
+        if(isEmpty()) {
+            throw new IndexOutOfBoundsException("Heap is empty");
+        }
+
+        int parent = getParent(index);
+        int deletedValue = heap[index];
+
+        heap[index] = heap[size - 1];
+
+        if(index == 0 || heap[index] < heap[parent]) {
+            fixHeapBelow(index, size - 1);
+        } else {
+            fixHeapAbove(index);
+        }
+
+        size--;
+        return deletedValue;
     }
 
     public void printHeap() {
@@ -104,6 +104,15 @@ public class Heap {
             throw new IndexOutOfBoundsException("Heap is empty");
         }
         return heap[0];
+    }
+
+    public void sort() {
+        for(int i = 0; i < size - 1; i++) {
+            int tmp = heap[size - i - 1];
+            heap[size - i - 1] = heap[0];
+            heap[0] = tmp;
+            fixHeapBelow(0, size - i - 2);
+        }
     }
 
 }

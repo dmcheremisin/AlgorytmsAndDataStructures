@@ -23,6 +23,9 @@ public class HeapTest {
         heap.delete(0);
         heap.printHeap(); // 75, 68, 60, 67, 55, 40, 52,
         System.out.println(heap.peek()); // 75
+
+        heap.sort();
+        heap.printHeap(); // 40, 52, 55, 60, 67, 68, 75,
     }
 
 }
