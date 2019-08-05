@@ -1,4 +1,4 @@
-package com.algorithms.data.structures.lists;
+package com.algorithms.data.structures.model;
 
 public class Employee {
 
@@ -7,6 +7,12 @@ public class Employee {
     private String lastName;
 
     public Employee(int id, String firstName, String lastName) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public Employee(String firstName, String lastName, int id) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;

@@ -1,6 +1,7 @@
 package com.algorithms.data.structures.lists;
 
 import com.algorithms.data.structures.lists.doublyLinkedList.DoublyLinkedList;
+import com.algorithms.data.structures.model.Employee;
 
 public class DoublyLinkedListTest {
 

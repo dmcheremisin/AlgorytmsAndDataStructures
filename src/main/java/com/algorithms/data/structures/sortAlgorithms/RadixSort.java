@@ -28,22 +28,6 @@ public class RadixSort {
             countArray[getDigit(divider, value, radix)]++;
         }
 
-//        my implementation
-//        int k = 0;
-//        for(int i = 0; i < radix; i++) {
-//            while(countArray[i] > 0) {
-//                for(int j = 0; j < numItems; j++) {
-//                    int digit = getDigit(divider, input[j], radix);
-//                    if(digit == i) {
-//                        countArray[i]--;
-//                        temp[k] = input[j];
-//                        k++;
-//                        input[j] = -1;
-//                    }
-//                }
-//            }
-//        }
-
         for(int i = 1; i < radix; i++) {
             countArray[i] += countArray[i - 1];
         }

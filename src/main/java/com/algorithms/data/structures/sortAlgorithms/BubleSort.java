@@ -1,5 +1,6 @@
 package com.algorithms.data.structures.sortAlgorithms;
 
+import static com.algorithms.data.structures.sortAlgorithms.Utils.printArr;
 import static com.algorithms.data.structures.sortAlgorithms.Utils.swap;
 
 public class BubleSort {
@@ -15,10 +16,7 @@ public class BubleSort {
                 }
             }
         }
-        System.out.println(">>>>>> Result: ");
-        for (int i : intArray) {
-            System.out.println(i);
-        }
+        printArr(intArray);
 
         /*
         Swapping 35 and -15

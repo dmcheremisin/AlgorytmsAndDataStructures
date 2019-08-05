@@ -1,5 +1,6 @@
 package com.algorithms.data.structures.sortAlgorithms;
 
+import static com.algorithms.data.structures.sortAlgorithms.Utils.printArr;
 import static com.algorithms.data.structures.sortAlgorithms.Utils.swap;
 
 public class SelectionSort {
@@ -17,10 +18,7 @@ public class SelectionSort {
             swap(intArray, largest, lastUnsortedIndex);
         }
 
-        System.out.println(">>>>>> Result: ");
-        for (int i : intArray) {
-            System.out.println(i);
-        }
+        printArr(intArray);
         /*
         >>>>>> Result:
         -22

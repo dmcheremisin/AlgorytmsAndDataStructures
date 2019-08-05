@@ -1,5 +1,7 @@
 package com.algorithms.data.structures.sortAlgorithms;
 
+import static com.algorithms.data.structures.sortAlgorithms.Utils.printArr;
+
 public class ShellSort {
 
     public static void main(String[] args) {
@@ -19,9 +21,6 @@ public class ShellSort {
             }
         }
 
-        System.out.println(">>>>>> Result: ");
-        for (int i : arr) {
-            System.out.println(i);
-        }
+        printArr(arr);
     }
 }

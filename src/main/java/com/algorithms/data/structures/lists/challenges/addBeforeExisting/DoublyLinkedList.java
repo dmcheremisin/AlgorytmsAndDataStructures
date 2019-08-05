@@ -1,6 +1,6 @@
 package com.algorithms.data.structures.lists.challenges.addBeforeExisting;
 
-import com.algorithms.data.structures.lists.Employee;
+import com.algorithms.data.structures.model.Employee;
 
 public class DoublyLinkedList {
 

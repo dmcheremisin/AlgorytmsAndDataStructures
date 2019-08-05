@@ -1,5 +1,6 @@
 package com.algorithms.data.structures.sortAlgorithms;
 
+import static com.algorithms.data.structures.sortAlgorithms.Utils.printArr;
 import static com.algorithms.data.structures.sortAlgorithms.Utils.swap;
 
 /**
@@ -12,10 +13,7 @@ public class QuickSort {
 
         sort(intArray, 0, intArray.length-1);
 
-        System.out.println(">>>>>> Result: ");
-        for (int i : intArray) {
-            System.out.println(i);
-        }
+        printArr(intArray);
     }
 
     public static void sort(int arr[], int low, int high) {
