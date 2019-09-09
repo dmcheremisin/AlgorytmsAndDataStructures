@@ -31,22 +31,6 @@ public class CartesianProduct {
             this.last = last;
         }
 
-        public int getFirst() {
-            return first;
-        }
-
-        public void setFirst(int first) {
-            this.first = first;
-        }
-
-        public int getLast() {
-            return last;
-        }
-
-        public void setLast(int last) {
-            this.last = last;
-        }
-
         @Override
         public String toString() {
             return "{" + first + ","  + last + '}';
