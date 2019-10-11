@@ -29,10 +29,9 @@ public class QuickSort {
 
     private static int partition(int arr[], int begin, int end) {
         int pivot = arr[end];
-        int i = (begin - 1); // index of smaller element
+        int i = (begin - 1);
 
         for (int j = begin; j < end; j++) {
-            // if current element is smaller than or equal to pivot
             if (arr[j] <= pivot) {
                 swap(arr, ++i, j);
             }
