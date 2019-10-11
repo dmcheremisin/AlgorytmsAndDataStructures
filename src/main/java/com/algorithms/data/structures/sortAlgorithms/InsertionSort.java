@@ -18,15 +18,6 @@ public class InsertionSort {
         }
 
         printArr(arr);
-        /*
-        >>>>>> Result:
-        -22
-        -15
-        1
-        7
-        35
-        45
-        55
-         */
+        //[-22, -15, 1, 7, 35, 45, 55]
     }
 }

@@ -19,15 +19,6 @@ public class SelectionSort {
         }
 
         printArr(intArray);
-        /*
-        >>>>>> Result:
-        -22
-        -15
-        1
-        7
-        20
-        35
-        55
-        */
+        //[-22, -15, 1, 7, 20, 35, 55]
     }
 }

@@ -9,7 +9,7 @@ public class MergeSort2 {
 
         mergeSort(arr);
 
-        printArr(arr);
+        printArr(arr); // [-22, -15, 1, 7, 20, 35, 55]
     }
 
     private static void mergeSort(int[] arr) {
