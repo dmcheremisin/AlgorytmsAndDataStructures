@@ -10,6 +10,7 @@ package com.algorithms.data.structures.challenges.codewars;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.Arrays;
 
 public class Friday13 {
 
@@ -26,5 +27,12 @@ public class Friday13 {
                 countFriday13++;
         }
         return countFriday13;
+    }
+
+    public static int unluckyDaysStream(int year) {
+        return (int) Arrays.stream(Month.values())
+                .map(month -> LocalDate.of(year, month, 13))
+                .filter(date -> date.getDayOfWeek().equals(DayOfWeek.FRIDAY))
+                .count();
     }
 }
