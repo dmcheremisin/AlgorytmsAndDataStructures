@@ -22,7 +22,7 @@ public class Friday13 {
         int countFriday13 = 0;
         for (Month month : Month.values()) {
             LocalDate date = LocalDate.of(year, month, 13);
-            if(date.getDayOfWeek().equals(DayOfWeek.FRIDAY))
+            if (date.getDayOfWeek().equals(DayOfWeek.FRIDAY))
                 countFriday13++;
         }
         return countFriday13;
