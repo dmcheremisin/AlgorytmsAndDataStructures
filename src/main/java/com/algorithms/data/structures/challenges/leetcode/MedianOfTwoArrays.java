@@ -15,15 +15,12 @@ package com.algorithms.data.structures.challenges.leetcode;
 class MedianOfTwoArrays {
 
     public static void main(String[] args) {
-        System.out.println(findMedianSortedArrays(new int[]{1, 2}, new int[]{3}));
+        System.out.println(findMedianSortedArrays(new int[]{2}, new int[]{}));
     }
 
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int len1 = nums1.length;
         int len2 = nums2.length;
-        if (len1 == 0 || len2 == 0)
-            return len1 == 0 ? len2 == 0 ? 0 : nums2[0] : nums1[0];
-
         int totalLen = len1 + len2;
         int[] result = new int[totalLen];
 
@@ -34,9 +31,9 @@ class MedianOfTwoArrays {
             else
                 result[k++] = nums2[j++];
         }
-        while (i < len1 - 1)
+        while (i < len1)
             result[k++] = nums1[i++];
-        while (j < len2 - 1)
+        while (j < len2)
             result[k++] = nums2[j++];
 
         if (totalLen % 2 != 0)
