@@ -21,6 +21,9 @@ class MedianOfTwoArrays {
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int len1 = nums1.length;
         int len2 = nums2.length;
+        if (len1 == 0 || len2 == 0)
+            return len1 == 0 ? len2 == 0 ? 0 : nums2[0] : nums1[0];
+
         int totalLen = len1 + len2;
         int[] result = new int[totalLen];
 
