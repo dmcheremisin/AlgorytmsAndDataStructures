@@ -36,12 +36,12 @@ public class ZigZagConversion {
         int index = 0, counter = 0;
         boolean direction = true;
 
-        String[] strArr = new String[numRows];
+        StringBuilder[] strArr = new StringBuilder[numRows];
         for (int i = 0; i < numRows; i++)
-            strArr[i] = "";
+            strArr[i] = new StringBuilder();
 
         do {
-            strArr[counter] += str.charAt(index);
+            strArr[counter].append(str.charAt(index));
 
             if ((counter == numRows - 1 && direction) || (counter == 0 && !direction))
                 direction = !direction;
