@@ -18,7 +18,15 @@ import java.util.Set;
 public class Parenthesis {
 
     public static void main(String[] args) {
-        generateParenthesis(2);
+        recursiveGetNums(1, 5);
+    }
+    private static void recursiveGetNums(int idx, int nums) {
+        System.out.println("Index is " + idx);
+        if (idx < nums)
+            recursiveGetNums(idx + 1, nums);
+
+        for (int i = idx + 1; i < nums; i++)
+            System.out.println("Parent index: " + idx + " ; current index: " + i);
     }
 
     public static List<String> generateParenthesis(int n) {
