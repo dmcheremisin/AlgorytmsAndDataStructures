@@ -10,44 +10,69 @@ package com.algorithms.data.structures.challenges.leetcode;
 //  "()()()"
 //]
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Parenthesis {
 
     public static void main(String[] args) {
-
+        generateParenthesis(2);
     }
 
-    public List<String> generateParenthesis(int n) {
+    public static List<String> generateParenthesis(int n) {
+        int length = 2 * n;
+        Set<List<Integer>> sets = new HashSet<>();
+
+        int i = 1;
+        while (i < n + 1) {
+            System.out.println(i);
+            i++;
+        }
         return null;
+    }
+
+    public List<Integer> getIndexes(int initialIndex, int n) {
+        List<Integer> nums = new ArrayList<Integer>();
+        int i = initialIndex;
+        while (i < 2 * n - 2) {
+            nums.add(i);
+            i++;
+        }
+
+        return nums;
     }
 
 }
 
 //n=1
-// 1
+// 0
 //"()"
 //------------------
-//1
+//0
 //===============
 //n=2
-// 12
+// 01
 //"(())"
-// 1 3
+// 0 2
 //"()()"
 //------------------
-//12, 13
+//01, 02
 //===============
 //n=3
-// 123
+// 012
 //"((()))",
-// 12 4
+// 01 3
 //"(()())",
-// 12  5
+// 01  4
 //"(())()",
-// 1 34
+// 0 23
 //"()(())",
-// 1 3 5
+// 0 2 4
 //"()()()"
 //------------------
-//123, 124, 125, 134, 135
+//012, 013, 014, 023, 024
+// 2 = n - 1 (elements available for storage)
+// 2(border index, no more combinations on it) =
+//                                       2n - 2(last index) - (n - 1)(elements to store in string, first always 0) = n - 1
