@@ -62,7 +62,7 @@ public class Parenthesis {
         int borderIndex = lastIndex - 2 * (n - itemNumber) + 1;
         for (int i = position; i <= borderIndex; i++) {
             System.out.println("Item number: " + itemNumber + " position: " + i);
-            getIntegers(itemNumber + 1, position + 1, n, lastIndex);
+            getIntegers(itemNumber + 1, i + 1, n, lastIndex);
         }
     }
 }
