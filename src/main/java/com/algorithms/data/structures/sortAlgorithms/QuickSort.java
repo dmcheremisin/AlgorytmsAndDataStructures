@@ -9,7 +9,7 @@ import static com.algorithms.data.structures.sortAlgorithms.Utils.swap;
 public class QuickSort {
 
     public static void main(String[] args) {
-        int[] intArray = {20, 35, -15, 7, 55, 1, -22};
+        int[] intArray = {18 ,1 ,8 ,3 ,2 ,7 ,11 ,4 ,10 ,13 ,19 ,15 ,6 ,5 ,12 ,16 ,0 ,14 ,17 ,9};
 
         sort(intArray, 0, intArray.length-1);
 
@@ -32,9 +32,8 @@ public class QuickSort {
         int i = (begin - 1);
 
         for (int j = begin; j < end; j++) {
-            if (arr[j] <= pivot) {
+            if (arr[j] <= pivot)
                 swap(arr, ++i, j);
-            }
         }
         swap(arr, ++i, end);
         return i;
